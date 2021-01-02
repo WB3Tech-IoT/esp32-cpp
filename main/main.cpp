@@ -1,13 +1,21 @@
 #include <iostream>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
+#include "relay.h"
 
 extern "C" void app_main(void)
 {
-    int i = 0;
-    while (i < 10) {
-        printf("[%d] Hello world!\n", i);
-        i++;
-        vTaskDelay(5000 / portTICK_PERIOD_MS);
+
+    RelayDriver relayDriver(GPIO_NUM_12);
+
+    while(1) {
+
+        printf("Relay Open - No current is running to the load.\n");
+        relayDriver.Open();
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
+
+        printf("Relay Close - Current is running to the load.\n");
+        relayDriver.Close();
+        vTaskDelay(1000 / portTICK_PERIOD_MS);
     }
 }
