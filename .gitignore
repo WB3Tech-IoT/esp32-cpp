@@ -1,3 +1,9 @@
+# IDE specific directories
+.idea/
+
+# Miscellaneous directories
+cmake-build-debug/
+
 # Prerequisites
 *.d
 
