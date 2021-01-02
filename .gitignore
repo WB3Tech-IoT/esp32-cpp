@@ -3,6 +3,12 @@
 
 # Miscellaneous directories
 cmake-build-debug/
+build/
+
+# ESP-IDF Files
+
+sdkconfig
+sdkconfig.old
 
 # Prerequisites
 *.d
