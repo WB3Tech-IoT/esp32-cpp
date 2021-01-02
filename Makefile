@@ -3,6 +3,6 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := esp32-cpp
+PROJECT_NAME := esp32_cpp
 
 include $(IDF_PATH)/make/project.mk
