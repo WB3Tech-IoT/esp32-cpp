@@ -1,10 +1,9 @@
 //
 // Created by Bill Bensing on 1/2/21.
 //
-
+#include <iostream>
 #include "driver/gpio.h"
-#include "relay.h"
-
+#include "../domain/relay.h"
 
 class RelayDriver : public Relay {
 
@@ -22,10 +21,12 @@ protected:
 
     void executeClose() {
         gpio_set_level(_gpio, 1);
+        printf("Relay Close - Current is running to the load.\n");
     }
 
     void executeOpen() {
-        gpio_set_level(_gpio, 1);
+        printf("Relay Open - No current is running to the load.\n");
+        gpio_set_level(_gpio, 0);
     }
 
 };
