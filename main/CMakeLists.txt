@@ -2,7 +2,7 @@
 set(COMPONENT_REQUIRES )
 set(COMPONENT_PRIV_REQUIRES )
 
-set(COMPONENT_SRCS "main.cpp" "relay.cpp")
-set(COMPONENT_ADD_INCLUDEDIRS "")
+set(COMPONENT_SRCS "main.cpp" "relayDriver.h")
+set(COMPONENT_ADD_INCLUDEDIRS .)
 
 register_component()
